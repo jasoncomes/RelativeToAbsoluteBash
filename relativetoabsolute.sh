@@ -1,7 +1,7 @@
 for file in **/*.html; do
 
     # Use Frontmatter Permalink Variable as Permalink
-    permalink=$(perl -l -0777 -ne 'print $1 if /permalink: \/(.*?)\/\n/si' $file);
+    permalink=$(perl -l -0777 -ne 'print $1 if /permalink: \/(.*?)\/?\n/si' $file);
 
     # Use Folder Structure as Permalink
     # permalink=$(echo $file | sed 's/\.html//g');
